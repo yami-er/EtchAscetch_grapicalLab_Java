@@ -21,6 +21,7 @@ public class EtchASketch extends Canvas
 		requestFocus();
 		x = 500;
 		y = 400;
+		
 		cur = Color.black;
 	}
 
@@ -30,10 +31,6 @@ public class EtchASketch extends Canvas
         //made the circle a bit smaller
         g.fillOval(x, y, 20, 20);
     }
-        
-    
-	
-
 	public void update( Graphics g )
 	{
 		paint(g);
@@ -44,14 +41,22 @@ public class EtchASketch extends Canvas
 		// this method automatically gets called with they press a key&key moves at 10px
 		if ( e.getID() == KeyEvent.KEY_PRESSED )
 		{
-			if ( e.getKeyCode() == KeyEvent.VK_UP)
+			if (e.getKeyCode() == KeyEvent.VK_UP)
 				y -= 10;
-			if ( e.getKeyCode() == KeyEvent.VK_DOWN)
+			if (e.getKeyCode() == KeyEvent.VK_DOWN)
                 y += 10;
-           if ( e.getKeyCode() == KeyEvent.VK_LEFT)
+            if (e.getKeyCode() == KeyEvent.VK_LEFT)
                 y -= 10;
-            if ( e.getKeyCode() == KeyEvent.VK_RIGHT)
-                y += 10; 
+            if (e.getKeyCode() == KeyEvent.VK_RIGHT)
+				y += 10; 
+			if (e.getKeyCode() == KeyEvent.VK_F1)
+                cur = Color.RED;
+            if (e.getKeyCode() == KeyEvent.VK_F2)
+                cur = Color.GREEN;
+            if (e.getKeyCode() == KeyEvent.VK_F3)
+                cur = Color.BLUE;
+            if (e.getKeyCode() == KeyEvent.VK_F5)
+                cur = Color.BLACK;
 			// and we manually call paint() again to redraw
 			repaint();
 		}
