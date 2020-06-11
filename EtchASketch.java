@@ -46,9 +46,9 @@ public class EtchASketch extends Canvas
 			if (e.getKeyCode() == KeyEvent.VK_DOWN)
                 y += 10;
             if (e.getKeyCode() == KeyEvent.VK_LEFT)
-                y -= 10;
+                x -= 10;
             if (e.getKeyCode() == KeyEvent.VK_RIGHT)
-				y += 10; 
+				x += 10; 
 			if (e.getKeyCode() == KeyEvent.VK_F1)
                 cur = Color.RED;
             if (e.getKeyCode() == KeyEvent.VK_F2)
